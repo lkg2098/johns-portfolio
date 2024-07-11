@@ -6,7 +6,7 @@ export default function Landing() {
                     <div>
                         <h1>John Gray</h1>
                         <h2>Full-stack Developer</h2>
-                        <p>A really nice guy!</p>
+                        <p>My story here...</p>
                         <div>
                             <a href="https://www.linkedin.com/in/john-thomas-gray" target="_blank" rel="noopener noreferrer">
                                 <img src="img/linkedin.png" alt="linkedin icon" width="22px" />
@@ -27,4 +27,3 @@ export default function Landing() {
         </section>
     )
 }
-
