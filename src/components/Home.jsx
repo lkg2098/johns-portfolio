@@ -1,6 +1,6 @@
-import Landing from "Landing";
-import Contact from "Contact";
-import Skills from "Skills";
+import Landing from "./Landing";
+import Contact from "./Contact";
+import Skills from "./Skills";
 
 export default function Home() {
     return (

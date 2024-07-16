@@ -3,105 +3,150 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact() {
 
-    const initialFormState = {
-        user_name: '',
+    const MY_EMAIL = process.env.REACT_APP_MY_EMAIL;
+    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
+    const [userError, setUserError] = useState('');
+    const [userSuccess, setUserSuccess] = useState('');
+    const [contactFormData, setContactFormData] = useState({
+        from_name: '',
         user_email: '',
-        message: ''
+        message: '',
+    });
+
+    const handleInputChange = (event) => {
+        setContactFormData({
+            ...contactFormData,
+            [event.target.name]: event.target.value,
+        });
     }
 
-    const [formData, setFormData] = useState(initialFormState)
-    const [showToast, setShowToast] = useState(false)
-
-    const handleInputChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        })
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
+        setUserSuccess('');
+        setUserError('');
 
-        emailjs.send(
-            process.env.REACT_APP_EMAILJS_SERVICE_ID,
-            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-            formData,
-            { publicKey:process.env.REACT_APP_EMAILJS_PUBLIC_KEY}
-        )
-        .then(
+        if (
+            !validateEmail(contactFormData.user_email) ||
+            contactFormData.user_email.toLowerCase() === MY_EMAIL
+        ) {
+            setUserError('Please enter a valid email address.');
+            return;
+        }
+
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, contactFormData, PUBLIC_KEY).then(
             () => {
-                console.log('SUCCESS!');
-                setShowToast(true);
-                setFormData(initialFormState);
-                setTimeout(() => setShowToast(false), 5000)
+                setUserSuccess('Your message has been sent.');
+                setContactFormData({
+                    from_name: '',
+                    user_email: '',
+                    message: '',
+                });
             },
             (error) => {
-                console.log('FAILED...', error.text);
+                setUserError('Whoops! Your message failed to send: ' + error.text);
             }
-        );
+        )
     }
 
     return (
-        <section id="contact-section">
-            <div>
-                <h1>Contact</h1>
-                <p>Reach out for business or just to chat.</p>
-            </div>
-            <div>
-                <form onSubmit={handleSubmit} id="contact-form">
-                    <div>
-                        <label htmlFor="user_name">Name</label>
+        <div
+            className="contact"
+            style={{
+                // backgroundImage: `url(${code})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundPositionY: 'fixed',
+                backgroundAttachment: 'fixed',
+            }}
+        >
+            <div className="offset-3 col-6">
+                <h1 style={{fontWeight: 'bold', textAlign: 'center'}}>Contact</h1>
+                <div><br /></div>
+                <p style={{fontWeight: 'bold', textAlign: 'center'}}>
+                    Reach out for professional inquiries or just to chat!
+                </p>
+                <div><br /></div>
+                <br />
+                {userError && (
+                    <div className="alert alert-danger">{userError}</div>
+                )}
+                {userSuccess && (
+                    <div className="alert alert-success">{userSuccess}</div>
+                )}
+                <form
+                    className="contact-form"
+                    id="contact-form"
+                    onSubmit={sendEmail}
+                >
+                    <div className="form-floating mb-3">
                         <input
-                        value={formData.user_name}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Your full name"
-                        type="text"
-                        id="user_name"
-                        name="user_name"
+                            required
+                            type="text"
+                            value={contactFormData.from_name}
+                            name="from_name"
+                            onChange={handleInputChange}
+                            className="form-control"
+                            placeholder="Name"
+                            style={{
+                                color: 'black',
+                                backgroundColor: 'transparent',
+                            }}
+                            maxLength={50}
                         />
+                        <label htmlFor="name">Name</label>
                     </div>
-                    <div>
-                        <label htmlFor="user_email">Email</label>
+                    <div className="form-floating mb-3">
                         <input
-                        value={formData.user_email}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Your email address"
-                        type="email"
-                        id="user_email"
-                        name="user_email"
+                            value={contactFormData.user_email}
+                            onChange={handleInputChange}
+                            placeholder="Email"
+                            required
+                            type="text"
+                            name="user_email"
+                            id="email"
+                            className="form-control"
+                            style={{
+                                color: 'black',
+                                backgroundColor: 'transparent',
+                            }}
+                            maxLength={50}
                         />
+                        <label htmlFor="email">Email</label>
                     </div>
-                    <div>
-                        <label htmlFor="message">Message</label>
+                    <div className="form-floating mb-3">
                         <textarea
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Your message"
-                        type="text"
-                        id="message"
-                        name="message"
-                        rows="8"
+                            value={contactFormData.message}
+                            onChange={handleInputChange}
+                            placeholder="Message"
+                            required
+                            name="message"
+                            id="message"
+                            className="form-control resizable"
+                            style={{
+                                color: 'black',
+                                backgroundColor: 'transparent',
+                                minHeight: '6rem',
+                            }}
+                            maxLength={1000}
                         />
+                        <label htmlFor="message">Message</label>
                     </div>
-                    <button type="submit">Submit</button>
+                    <div className="text-center">
+                        <div><br /></div>
+                        <button>
+                            Submit
+                        </button>
+                    </div>
+                    <br></br>
                 </form>
             </div>
-            <div id="success-message">
-                {showToast && (
-                    <div>
-                        <div>
-                            <strong>Success</strong>
-                            <button type="button" onClick={() => setShowToast(false)}></button>
-                        </div>
-                        <div>
-                            Message sent. We'll be in touch!
-                        </div>
-                    </div>
-                )}
-            </div>
-        </section>
+        </div>
     )
 }
