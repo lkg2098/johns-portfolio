@@ -47,50 +47,62 @@ export default function Landing() {
 
     return (
         <div style={backgroundStyle}>
-            <div>
-                <div>
-                    <h1>John Gray</h1>
-                    <h2>FULL - STACK DEVELOPER</h2>
-                    <div>
-                        <a
-                            href="https://www.linkedin.com/in/john-thomas-gray"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src={linkedin}
-                                alt="linkedin"
-                                width='40px'
-                                style={{paddingRight: '10px', cursor: 'pointer'}}
-                                className="expand"
-                            />
-                        </a>
-                        <a
-                            href="https://github.com/john-thomas-gray"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src={github}
-                                alt="github"
-                                width='40px'
-                                style={{paddingRight: '10px', cursor: 'pointer'}}
-                                className="expand"
-                            />
-                        </a>
-                        <span className="expand">
-                            <img
-                                src={gmail}
-                                alt="gmail"
-                                width='45px'
-                                style={{paddingRight: '10px', cursor: 'pointer'}}
-                                onClick={handleCopy}
-                                className="expand"
-                            />
-                        </span>
+            <div className="c-row">
+                <div className="d-flex align-items-center justify-items-center">
+                    {/* <div style={{width: '8rem'}}></div> */}
+                    <div className="about-text align-items-center">
+                        <h1 className="name">John Gray</h1>
+                        <h2>FULL - STACK DEVELOPER</h2>
+                        <div>
+                            <a
+                                href="https://www.linkedin.com/in/john-thomas-gray"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={linkedin}
+                                    alt="linkedin"
+                                    width='40px'
+                                    style={{paddingRight: '10px', cursor: 'pointer'}}
+                                    className="expand"
+                                />
+                            </a>
+                            <a
+                                href="https://github.com/john-thomas-gray"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={github}
+                                    alt="github"
+                                    width='40px'
+                                    style={{paddingRight: '10px', cursor: 'pointer'}}
+                                    className="expand"
+                                />
+                            </a>
+                            <span className="expand">
+                                <img
+                                    src={gmail}
+                                    alt="gmail"
+                                    width='45px'
+                                    style={{paddingRight: '10px', cursor: 'pointer'}}
+                                    onClick={handleCopy}
+                                    className="expand"
+                                />
+                            </span>
+                        </div>
+
+                    <div className="profile-image align-items-center position-relative">
+                        <img
+                            src={profile}
+                            style={{
+                                boxShadow: '20px 20px 0px 5px',
+                                transition: 'all 0.5s ease-in-out',
+                            }}
+                            alt="Profile"
+                        />
                     </div>
-                    <div>
-                        <img src={profile} alt="Profile pic" width="200px" />
+                    <div style={{width: '8rem'}}></div>
                     </div>
                 </div>
             </div>
