@@ -4,12 +4,13 @@ import linkedin from '../images/linkedin.png';
 import github from '../images/github.png';
 import gmail from '../images/gmail.png';
 import profile from '../images/profile.png';
+import jungle_vista from '../images/jungle_vista.jpg';
 
 const Tooltip = ({ position, message }) => {
     return (
         <div style={{
             position: 'absolute',
-            top: position.y + 10,
+            top: position.y - 25,
             left: position.x + 10,
             backgroundColor: 'black',
             color: 'white',
@@ -60,7 +61,7 @@ export default function Landing() {
     }, [tooltip.visible]);
 
     const backgroundStyle = {
-        backgroundImage: '',
+        backgroundImage: `url(${jungle_vista})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundPositionY: 'fixed',
@@ -113,7 +114,6 @@ export default function Landing() {
                                 width='45px'
                                 style={{paddingRight: '10px', cursor: 'pointer'}}
                                 onClick={handleCopy}
-                                className="expand"
                             />
                         </span>
                         <div><br /></div>
@@ -121,10 +121,6 @@ export default function Landing() {
                     <div className="profile-image align-items-center position-relative">
                         <img
                             src={profile}
-                            style={{
-                                boxShadow: '20px 20px 0px 5px',
-                                transition: 'all 0.5s ease-in-out',
-                            }}
                             alt="Profile"
                         />
                     </div>

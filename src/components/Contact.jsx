@@ -140,7 +140,11 @@ export default function Contact() {
                     </div>
                     <div className="text-center">
                         <div><br /></div>
-                        <button>
+                        <button
+                            type="submit"
+                            className="btn btn-primary rounded-pill"
+                            style={{ backgroundColor: '#ADD8E6', fontWeight: 'bold', color: 'navy' }}
+                        >
                             Submit
                         </button>
                     </div>
