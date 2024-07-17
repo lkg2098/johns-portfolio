@@ -1,6 +1,7 @@
 import Landing from "./Landing";
 import Contact from "./Contact";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 export default function Home() {
     return (
@@ -12,6 +13,9 @@ export default function Home() {
                     </section>
                     <section id="skills">
                         <Skills />
+                    </section>
+                    <section id="projects">
+                        <Projects />
                     </section>
                     <section id="contact">
                         <Contact />
