@@ -59,7 +59,7 @@ export default function Contact() {
         <div
             className="contact"
             style={{
-                // backgroundImage: `url(${code})`,
+                backgroundColor: '#F7F9EB',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundPositionY: 'fixed',
@@ -144,8 +144,14 @@ export default function Contact() {
                         <div><br /></div>
                         <button
                             type="submit"
-                            className="btn btn-primary rounded-pill"
-                            style={{ backgroundColor: '#ADD8E6', fontWeight: 'bold', color: 'navy' }}
+                            className="btn  rounded-pill"
+                            style={{
+                                backgroundColor: '#B4C69E',
+                                fontWeight: 'bold',
+                                color: '#012F23',
+                                outline: '2px solid #F3F5DF'
+                            }
+                        }
                         >
                             Submit
                         </button>

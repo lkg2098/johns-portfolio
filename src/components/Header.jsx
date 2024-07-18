@@ -3,10 +3,10 @@ import React, {useState, useEffect} from 'react';
 
 export default function Header(props) {
     return (
-    <header style={{backgroundColor: 'black'}}>
+    <header style={{padding: '2rem'}}>
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container-fluid">
-          <div className="collapse navbar-collapse sticky-top" id="navbarNav" style={{padding: '1rem'}}>
+          <div className="collapse navbar-collapse sticky-top" id="navbarNav" >
                   <ul className="navbar-nav">
                       <li className="nav-item">
                         <span

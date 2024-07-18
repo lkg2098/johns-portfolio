@@ -46,7 +46,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 110%;
 }
 
 h1.name {
@@ -65,12 +65,14 @@ h4 {
 }
 
 .profile-image img {
-  max-width: 25rem;
-  min-height: 25rem;
+  max-width: 30rem;
+  min-height: 30rem;
   object-fit: cover;
   border-radius: 0.5rem;
   background-color: transparent;
   transition: all 0.2s ease-in-out;
+
+  border-radius       : 50%;
 }
 
 @media (max-width: 800px) {
@@ -130,8 +132,9 @@ footer h6 {
 
 /* Navbar */
 nav {
-  background-color: var(--navy);
-  height: 5rem;
+  padding: '1rem';
+  background-color: rgba(1, 47, 35, 0.95);
+  height: 4rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -183,7 +186,7 @@ nav {
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: var(--white);
+  color: #F3F5DF;
   display: block;
   text-align: center;
   width: 100% !important;
@@ -195,4 +198,145 @@ nav {
 
 .navbar-toggler-icon {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E') !important;
+}
+
+/* Skills */
+
+.frontend {
+  flex: 1;
+  display: flex;        /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center;  /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically if needed */
+  width: 100%;          /* Ensures the container takes full width if standalone */
+  margin-top: 20px;
+}
+.backend {
+  flex: 1;
+  display: flex;        /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center;  /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically if needed */
+  width: 100%;          /* Ensures the container takes full width if standalone */
+  margin-top: 20px;
+}
+.languages {
+  flex: 1;
+  display: flex;        /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center;  /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically if needed */
+  width: 100%;          /* Ensures the container takes full width if standalone */
+  margin-top: 20px;
+}
+.devops {
+  flex: 1;
+  display: flex;        /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center;  /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically if needed */
+  width: 100%;          /* Ensures the container takes full width if standalone */
+  margin-top: 20px;
+}
+
+/* Main container styles */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100vw;
+  background-color: rgb(52, 47, 62);
+  color: #012F23;
+  padding: 7rem 5rem;
+  font-size: 1.2rem;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* Aligns children horizontally */
+  align-items: center; /* Keeps items aligned at their center */
+  justify-content: center; /* Centers items horizontally within the container */
+  gap: 10px; /* Adds space between the image and text */
+  margin-bottom: 10px; /* Adds some space between each image container */
+}
+
+.alt-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.alt-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.image-container:hover .alt-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .skills {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .frontend,
+  .backend,
+  .languages,
+  .devops {
+      flex: unset;
+      width: 100%;
+      padding: 1rem 0;
+  }
+}
+
+/* Projects */
+.projects {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  color: var(--navy);
+}
+
+/* Contact Form */
+.contact {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  color: #012F23;
+}
+
+.resizable {
+  resize: vertical;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  height: 0px; /* height of total scrollbar */
+  width: 0px; /* width of total scrollbar */
+  background: #ffc99c; /* background of scrollbar */
+  border: 0px solid #000; /* border around whole scrollbar */
 }

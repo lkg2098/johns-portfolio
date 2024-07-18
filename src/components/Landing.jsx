@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import linkedin from '../images/linkedin.png';
 import github from '../images/github.png';
 import gmail from '../images/gmail.png';
-import profile from '../images/profile.png';
+import profile from '../images/profile_sq.png';
 import jungle_vista from '../images/jungle_vista.jpg';
 
 const Tooltip = ({ position, message }) => {
@@ -61,7 +61,7 @@ export default function Landing() {
     }, [tooltip.visible]);
 
     const backgroundStyle = {
-        backgroundImage: `url(${jungle_vista})`,
+        // backgroundImage: `url(${jungle_vista})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundPositionY: 'fixed',
@@ -70,6 +70,10 @@ export default function Landing() {
 
     return (
         <div style={backgroundStyle}>
+            <div><br /></div>
+            <div><br /></div>
+            <div><br /></div>
+            <div><br /></div>
             <div className="c-row">
                 <div className="d-flex align-items-center justify-items-center">
                     <div style={{width: '8rem'}}></div>
@@ -128,6 +132,8 @@ export default function Landing() {
                 </div>
             </div>
             {tooltip.visible && <Tooltip position={{ x: tooltip.x, y: tooltip.y }} message="Email address copied to clipboard!" />}
+            <div><br /></div>
+            <div><br /></div>
         </div>
     )
 }

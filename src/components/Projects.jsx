@@ -111,7 +111,8 @@ export default function Projects() {
             <h1 className="center" style={{ fontWeight: 'bold' }}>
                 My Projects
             </h1>
-            <br />
+            <div><br /></div>
+            <div><br /></div>
             <div className="container">
                 <div className="row">
                     {myProjects.map((project, index) => (

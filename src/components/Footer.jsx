@@ -8,7 +8,7 @@ const Tooltip = ({ position, message }) => {
     return (
         <div style={{
             position: 'absolute',
-            top: position.y + 800,
+            top: position.y,
             left: position.x + 10,
             backgroundColor: 'black',
             color: 'white',
