@@ -1,7 +1,13 @@
 export default function Skills() {
     return (
         <section id="skills-section">
-            <h1>Skills</h1>
+            <div><br /></div>
+            <div><br /></div>
+            <h1 className="center" style={{ fontWeight: 'bold' }}>
+                Skills
+            </h1>
+            <div><br /></div>
+            <div><br /></div>
             <div>
                 <div>
                     <h2>Front End</h2>

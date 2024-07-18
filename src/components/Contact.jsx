@@ -66,6 +66,8 @@ export default function Contact() {
                 backgroundAttachment: 'fixed',
             }}
         >
+            <div><br /></div>
+            <div><br /></div>
             <div className="offset-3 col-6">
                 <h1 style={{fontWeight: 'bold', textAlign: 'center'}}>Contact</h1>
                 <div><br /></div>

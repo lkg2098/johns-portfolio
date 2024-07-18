@@ -59,33 +59,55 @@ export default function Projects() {
 
     const myProjects = [
         {
-            video: 'PFLjDga1Egw',
+            video: 'NTBRThwL-2c?si=Sj-Peyx4ZPsdIqnJ',
             liveLink: 'test',
             codeLink: 'https://gitlab.com/gracehlee/fearless-frontend',
             title: 'Portfolio Site',
-            description: 'A full-stack web application that allows users to keep track of conferences, events, and attendees: dynamic front-end with React, JavaScript, and Bootstrap, back-end infrastructure using Django and Python, ensuring robustness and scalability, and third-party APIs with Pexels and Weather updates.',
+            description: 'A portfolio website application showcasing my recent ' +
+            'and significant projects. Code was built using the React.js framework, ' +
+            'using HTML, CSS, and Bootstrap to set up the main front-end graphical ' +
+            'user interface. Navigation will snap to the desired section using DOM ' +
+            'manipulation. Contact form with email capabilities was built using ' +
+            'third-party API, EmailJS. Site was deployed through Netlify.',
             tags: ['React', 'Bootstrap', 'DOM', 'CSS', 'EmailJS', 'Netlify'],
         },
         {
-            video: 'i6nX5Bb1AIU',
+            video: 'NTBRThwL-2c?si=Sj-Peyx4ZPsdIqnJ',
             liveLink: 'test',
             codeLink: 'https://gitlab.com/gracehlee/pb-art-site',
             title: 'Candy Cruisers',
-            description: 'An early Django-centric project of an art portfolio web application that allows users to upload image files to their portfolio, follow other users to view their artwork in the home dashboard, and explore all artworks in the Explore tab. Users can also search artworks by the artist name, artwork title, and by any associated tags.',
+            description: 'Addictive 2D top-down space shooter/puzzle video game.',
             tags: ['Python', 'Django', 'HTML', 'CSS', 'SQLite3', 'PowerShell']
         },
         {
-            video: 'cSZKaBTFBj4',
+            video: 'NTBRThwL-2c?si=Sj-Peyx4ZPsdIqnJ',
             liveLink: 'test',
             codeLink: 'https://gitlab.com/gracehlee/cute-cats',
             title: 'Booky',
-            description: 'An early Django-centric project of a 2000`s aesthetic website featuring popular meme cats. Users are able to log in, submit a form to add a new cat, and click on individual cats to view or edit information. Instances of cats are managed by SQLite3 database. Frontend business logic requires login to view locked content. My first website!',
+            description: 'Full-stack development of a web application that allows ' +
+            'users to create book clubs, schedule meetings and interact with their ' +
+            'friends. A betting and point-scoring incentivizes participation with ' +
+            'friendly competition.',
             tags: ['Python', 'Django', 'CSS', 'HTML', 'SQLite3', 'Powershell']
+        },
+        {
+            video: 'NTBRThwL-2c?si=Sj-Peyx4ZPsdIqnJ',
+            liveLink: 'test',
+            codeLink: 'https://gitlab.com/gracehlee/fearless-frontend',
+            title: 'Conference GO',
+            description: 'A full-stack web application that allows users to keep ' +
+            'track of conferences, events, and attendees: dynamic front-end with ' +
+            'React, JavaScript, and Bootstrap, back-end infrastructure using Django ' +
+            'and Python, ensuring robustness and scalability, and third-party APIs ' +
+            'with Pexels and Weather updates.',
+            tags: ['React', 'JavaScript', 'Django', 'Python', 'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST API']
         },
     ];
 
     return (
         <div className="projects">
+            <div><br /></div>
+            <div><br /></div>
             <h1 className="center" style={{ fontWeight: 'bold' }}>
                 My Projects
             </h1>

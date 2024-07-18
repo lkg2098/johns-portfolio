@@ -37,6 +37,11 @@ html, body {
   padding-bottom: 7rem;
 }
 
+.about-text {
+  flex: 1;
+  padding-right: 7rem;
+}
+
 .d-flex {
   display: flex;
   justify-content: space-between;
@@ -44,9 +49,15 @@ html, body {
   width: 100%;
 }
 
-.about-text {
-  flex: 1;
-  padding-right: 7rem;
+h1.name {
+  font-family: 'Frutiger', sans-serif;
+  font-size: 4rem;
+  color: var(--navy);
+  font-weight: bolder;
+}
+
+h4 {
+  font-weight: bold !important;
 }
 
 .profile-image {
@@ -58,7 +69,7 @@ html, body {
   min-height: 25rem;
   object-fit: cover;
   border-radius: 0.5rem;
-  background-color: rgb(190, 198, 211);
+  background-color: transparent;
   transition: all 0.2s ease-in-out;
 }
 
@@ -115,4 +126,73 @@ footer h6 {
 
 .expand img:hover {
   transform: scale(1.03);
+}
+
+/* Navbar */
+nav {
+  background-color: var(--navy);
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  font-family: 'Frutiger';
+  font-weight: normal;
+}
+
+.navbar .container-fluid {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Nav Links */
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-right: 2rem;
+  font-family: 'Frutiger';
+  font-size: 1.3rem !important;
+  font-weight: bolder;
+}
+
+.nav-content:hover {
+  color: rgb(202, 202, 202) !important;
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-collapse {
+  background-color: var(--navy);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  width: 100vw;
+}
+
+.collapse.show .navbar-nav {
+  background-color: var(--navy);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: var(--white);
+  display: block;
+  text-align: center;
+  width: 100% !important;
+}
+
+.navbar-toggler {
+  border-color: white !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E') !important;
 }
