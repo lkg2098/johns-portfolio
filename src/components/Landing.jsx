@@ -61,15 +61,16 @@ export default function Landing() {
     }, [tooltip.visible]);
 
     const backgroundStyle = {
-        // backgroundImage: `url(${jungle_vista})`,
+        backgroundImage: 'linear-gradient(to right, #395B4D 55%, #012F23 100%)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundPositionY: 'fixed',
         backgroundAttachment: 'fixed',
     };
 
     return (
         <div style={backgroundStyle}>
+            <div><br /></div>
+            <div><br /></div>
             <div><br /></div>
             <div><br /></div>
             <div><br /></div>
@@ -81,7 +82,7 @@ export default function Landing() {
                         <h1 className="name">
                             John Gray
                         </h1>
-                        <h2>
+                        <h2 className="fullstack">
                             FULL - STACK DEVELOPER
                         </h2>
                         <div><br /></div>
@@ -93,7 +94,7 @@ export default function Landing() {
                             <img
                                 src={linkedin}
                                 alt="linkedin"
-                                width='40px'
+                                width='55px'
                                 style={{paddingRight: '10px', cursor: 'pointer'}}
                                 className="expand"
                             />
@@ -106,7 +107,7 @@ export default function Landing() {
                             <img
                                 src={github}
                                 alt="github"
-                                width='40px'
+                                width='55px'
                                 style={{paddingRight: '10px', cursor: 'pointer'}}
                                 className="expand"
                             />
@@ -115,8 +116,11 @@ export default function Landing() {
                             <img
                                 src={gmail}
                                 alt="gmail"
-                                width='45px'
-                                style={{paddingRight: '10px', cursor: 'pointer'}}
+                                width='55px'
+                                style={{
+                                    paddingRight: '5px',
+                                    cursor: 'pointer',
+                                }}
                                 onClick={handleCopy}
                             />
                         </span>
@@ -134,6 +138,8 @@ export default function Landing() {
             {tooltip.visible && <Tooltip position={{ x: tooltip.x, y: tooltip.y }} message="Email address copied to clipboard!" />}
             <div><br /></div>
             <div><br /></div>
+            <div><br /></div>
+
         </div>
     )
 }

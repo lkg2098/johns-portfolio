@@ -20,33 +20,33 @@ import heroku from '../images/heroku.svg';
 import cypress from '../images/cypress.svg';
 import express from '../images/express.svg';
 import mongodb from '../images/mongodb.svg';
+import vite from '../images/vite.svg';
+import unity from '../images/unity.svg';
 
 export default function Skills() {
     return (
         <div
             className="skills"
-            style={{
-                backgroundColor: '#F7F9EB',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundPositionY: 'fixed',
-                backgroundAttachment: 'fixed',
-                display: 'flex',
-                flexWrap: 'wrap',
-            }}
         >
-            <div><br /></div>
-            <div><br /></div>
-            <div><br /></div>
-            <div><br /></div>
-            <h1 style={{
-                fontWeight: 'bold',
-                color: '#012F23',
-                flex: 1,
-                padding: '1rem',
-                }}>
-                Skills
-            </h1>
+            <div style={{
+                    flex: 1,
+                    padding: '1rem',
+                    }}>
+                <h1 style={{
+                    fontWeight: 'bold',
+                    color: '#012F23',
+                    }}>
+                    Skills
+                </h1>
+                <div><br /></div>
+                <p className="skills-p">
+                I am proficient in a diverse array of technologies that span the complete software
+                development lifecycle. My expertise lies not only in continually honing
+                a deep understanding of tools currently in my stack, but also in
+                efficiently incorportating newly learned skills. I make an impact early,
+                whether I'm jumping into a new codebase or helping the team pivot to an emergent technology.
+                </p>
+            </div>
             <div><br /></div>
             <div className="languages">
                 <h2>Languages</h2>
@@ -119,6 +119,10 @@ export default function Skills() {
                     <img src={bootstrap} alt="bootstrap" width='75px' style={{borderRadius: '0.3rem'}}/>
                     <span className="alt-text">Bootstrap</span>
                 </div>
+                <div className="image-container">
+                    <img src={vite} alt="vite" width='75px' style={{borderRadius: '0.3rem'}}/>
+                    <span className="alt-text">Vite</span>
+                </div>
             </div>
             <div className="backend">
                 <h2>Backend</h2>
@@ -138,6 +142,10 @@ export default function Skills() {
                 <div className="image-container">
                     <img src={postgresql} alt="postgresql" width='75px'/>
                     <span className="alt-text">postgreSQL</span>
+                </div>
+                <div className="image-container">
+                    <img src={unity} alt="unity" width='75px'/>
+                    <span className="alt-text">Unity</span>
                 </div>
                 <div className="image-container">
                     <img src={express} alt="express" width='75px'/>
