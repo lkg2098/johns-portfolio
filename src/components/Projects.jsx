@@ -5,6 +5,7 @@ import colorChameleon from '../images/colorchameleon.png';
 import portfolio from '../images/portfolio.png';
 import carcar from '../images/carcar.png';
 import conferencego from '../images/conferencego.png';
+import github from '../images/github.png'
 
 function ImagePreviewer({ image, title }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,7 +22,8 @@ function ImagePreviewer({ image, title }) {
                     cursor: 'zoom-in',
                     width: '100%',
                     height: '230px',
-                    objectFit: 'cover'
+                    objectFit: 'cover',
+                    borderRadius: '5px'
                 }}
                 onClick={openModal}
             />
@@ -45,7 +47,7 @@ function ImagePreviewer({ image, title }) {
                             cursor: 'zoom-out',
                             maxHeight: '90%',
                             maxWidth: '90%',
-                            boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+                            boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                         }}
                     />
                 </div>
@@ -54,12 +56,12 @@ function ImagePreviewer({ image, title }) {
     );
 }
 
-function ProjectCard({ image, liveLink, gitLink, title, description, tags }) {
+function ProjectCard({ image, link, title, description, tags }) {
     const buttonStyle = {
         backgroundColor: '#B4C69E',
         fontWeight: 'bold',
         color: '#012F23',
-        outline: '2px solid #F3F5DF',
+        outline: '2px solid white',
         border: 'none',
         borderRadius: '5px',
         padding: '5px 10px',
@@ -67,15 +69,21 @@ function ProjectCard({ image, liveLink, gitLink, title, description, tags }) {
     };
 
     return (
-        <div className="card mb-4" style={{ border: '2px solid', backgroundColor: 'white', color: 'black', borderRadius: '4px' }}>
+        <div className="card mb-4" style={{ border: '0px solid', backgroundColor: '#F3F5DF', color: 'black', borderRadius: '4px' }}>
             <div style={{ margin: '10px' }}>
                 <ImagePreviewer image={image} title={title} />
             </div>
             <div className="card-body">
                 <div className="d-flex justify-content-between mb-3 align-items-center">
                     <h5 className="card-title">{title}</h5>
-                    <div>
-                        <a href={gitLink} className="btn btn-primary" style={buttonStyle}>💻</a>
+                    <div style={{marginRight: '40px'}}>
+                    <a href={link} target="_blank" className="btn btn-primary" style={{...buttonStyle, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                        {link.includes("github") ? (
+                            <img src={github} alt="GitHub" style={{ width: '24px', height: '24px' }} />
+                        ) : (
+                            '💻'
+                        )}
+                    </a>
                     </div>
                 </div>
                 <p className="card-text">{description}</p>
@@ -92,8 +100,7 @@ function ProjectCard({ image, liveLink, gitLink, title, description, tags }) {
 const myProjects = [
     {
         image: beecore,
-        liveLink: 'https://www.changeclimate.org/bee',
-        codeLink: '',
+        link: 'https://www.changeclimate.org/bee',
         title: 'Business Emissions Evaluator',
         description: 'A carbon emissions measurement software I\’m developing as a volunteer in collaboration with the Change Climate Project. ' +
         'This robust and modular codebase uses TypeScript and Node.js, with microservices written in Python. ' +
@@ -105,8 +112,7 @@ const myProjects = [
     },
     {
         image: portfolio,
-        liveLink: 'test',
-        gitLink: 'https://github.com/john-thomas-gray/Portfolio',
+        link: 'https://github.com/john-thomas-gray/Portfolio',
         title: 'Portfolio Site',
         description: 'A single page web application showcasing my skills ' +
         'and projects, built with the React.js framework. Written in JavaScript, ' +
@@ -118,8 +124,7 @@ const myProjects = [
     },
     {
         image: colorChameleon,
-        liveLink: 'test',
-        gitLink: 'https://github.com/john-thomas-gray/Candy-Cruisers',
+        link: 'https://github.com/john-thomas-gray/Candy-Cruisers',
         title: 'Candy Cruisers',
         description: 'An addictive blend of arcade shooters and color-matching puzzle video games. ' +
         'N-ary search algorithms dynamically reposition grid-based enemies and track spatial relationships between them. ' +
@@ -131,8 +136,7 @@ const myProjects = [
     },
     {
         image: booky,
-        liveLink: 'test',
-        gitLink: 'https://github.com/john-thomas-gray/Booky',
+        link: 'https://github.com/john-thomas-gray/Booky',
         title: 'Booky',
         description: 'A full-stack web application that allows users to make friends and compete by participating in book clubs. ' +
         'A relational database built with SQL creates complex interactions between data models. ' +
@@ -145,8 +149,7 @@ const myProjects = [
     },
     {
         image: conferencego,
-        liveLink: 'test',
-        gitLink: 'https://github.com/john-thomas-gray/Conference-GO',
+        link: 'https://github.com/john-thomas-gray/Conference-GO',
         title: 'Conference GO',
         description: 'A full-stack web application that allows users to keep track of conferences, events, and attendees. ' +
         'The front-end is built with React, JavaScript, JSX and Bootstrap. ' +
@@ -157,8 +160,7 @@ const myProjects = [
     },
     {
         image: carcar,
-        liveLink: 'test',
-        gitLink: 'https://github.com/john-thomas-gray/CarCar',
+        link: 'https://github.com/john-thomas-gray/CarCar',
         title: 'CarCar',
         description: 'A microservices web application designed to handle automobile inventory, sales, and services for a car dealership. ' +
         'Users submit forms to add automobiles, technicians, and customers to a postgreSQL database and schedule appointments. ' +
@@ -175,8 +177,6 @@ export default function Projects() {
 
     return (
         <div className="projects">
-            <div><br /></div>
-            <div><br /></div>
             <h1 className="center" style={{ fontWeight: 'bold' }}>
                 Recent Projects
             </h1>
