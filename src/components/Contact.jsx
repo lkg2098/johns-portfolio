@@ -59,7 +59,7 @@ export default function Contact() {
         <div
             className="contact"
             style={{
-                backgroundColor: '#F3F5DF',
+                backgroundColor: '#F7F9EB',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundPositionY: 'fixed',
