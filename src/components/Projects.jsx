@@ -4,6 +4,7 @@ import beecore from '../images/beecore.png';
 import colorChameleon from '../images/colorchameleon.png';
 import portfolio from '../images/portfolio.png';
 import carcar from '../images/carcar.png';
+import conferencego from '../images/conferencego.png';
 
 function ImagePreviewer({ image, title }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,65 +95,78 @@ const myProjects = [
         liveLink: 'https://www.changeclimate.org/bee',
         codeLink: '',
         title: 'Business Emissions Evaluator',
-        description: 'A portfolio website application showcasing my recent ' +
-        'and significant projects. Code was built using the React.js framework, ' +
-        'using HTML, CSS, and Bootstrap to set up the main front-end graphical ' +
-        'user interface. Navigation will snap to the desired section using DOM ' +
-        'manipulation. Contact form with email capabilities was built using ' +
-        'third-party API, EmailJS. Site was deployed through Netlify.',
-        tags: ['React', 'Typescript', 'Cypress', 'CI/CD', 'CSS', 'Python'],
+        description: 'A carbon emissions measurement software I\’m developing as a volunteer in collaboration with the Change Climate Project. ' +
+        'This robust and modular codebase uses TypeScript and Node.js, with microservices written in Python. ' +
+        'Global corporations (REI, Vuori, etc.) utilize the React-based frontend to input data, calculate emissions and plan reduction strategies. ' +
+        'Charts and graphs are implemented for data visualization. Interfaces and types facilitate adherence to rigorous style guidelines. ' +
+        'Cypress testing is used for continuous integration and deployment.' +
+        '',
+        tags: ['React', 'Typescript', 'Cypress', 'CI/CD', 'CSS', 'Python', 'Node.js', 'Yarn'],
     },
     {
         image: portfolio,
         liveLink: 'test',
         gitLink: 'https://github.com/john-thomas-gray/Portfolio',
         title: 'Portfolio Site',
-        description: 'A portfolio website application showcasing my recent ' +
-        'and significant projects. Code was built using the React.js framework, ' +
-        'using HTML, CSS, and Bootstrap to set up the main front-end graphical ' +
-        'user interface. Navigation will snap to the desired section using DOM ' +
-        'manipulation. Contact form with email capabilities was built using ' +
-        'third-party API, EmailJS. Site was deployed through Netlify.',
-        tags: ['React', 'Bootstrap', 'DOM', 'CSS', 'EmailJS', 'Netlify'],
+        description: 'A single page web application showcasing my skills ' +
+        'and projects, built with the React.js framework. Written in JavaScript, ' +
+        'with JSX, CSS, and Bootstrap for styling. The nav bar uses DOM manipulation to ' +
+        'take the user to the selected section. UseEffect hook makes "email address copied" ' +
+        'message follow the user\'s cursor. EmailJS, a third-party API, powers the contact form.  ' +
+        'I deployed the site with Heroku and Netlify.',
+        tags: ['React', 'Bootstrap', 'DOM', 'CSS', 'EmailJS', 'Netlify', 'JSX', 'JavaScript'],
     },
     {
         image: colorChameleon,
         liveLink: 'test',
         gitLink: 'https://github.com/john-thomas-gray/Candy-Cruisers',
         title: 'Candy Cruisers',
-        description: 'Addictive 2D top-down space shooter/puzzle video game.',
-        tags: ['Python', 'Django', 'HTML', 'CSS', 'SQLite3', 'PowerShell']
+        description: 'An addictive blend of arcade shooters and color-matching puzzle video games. ' +
+        'N-ary search algorithms dynamically reposition grid-based enemies and track spatial relationships between them. ' +
+        'An event bus facilitates communication between complex decoupled systems. ' +
+        'Level progression system recalculates point rewards and difficulty the further a player progresses. ' +
+        'Each of five enemy types uses a distinct ability, augmented when like-colored enemies group together.',
+        tags: ['C#', 'Unity', 'Event System', 'N-ary Tree', 'Queues', ]
+            // 'json', 'PostgreSQL']
     },
     {
         image: booky,
         liveLink: 'test',
         gitLink: 'https://github.com/john-thomas-gray/Booky',
         title: 'Booky',
-        description: 'Full-stack development of a web application that allows ' +
-        'users to create book clubs, schedule meetings and interact with their ' +
-        'friends. Point-scoring and betting systems incentivize participation ' +
-        'by creating friendly competition.',
-        tags: ['Python', 'Django', 'CSS', 'HTML', 'SQLite3', 'Powershell']
+        description: 'A full-stack web application that allows users to make friends and compete by participating in book clubs. ' +
+        'A relational database built with SQL creates complex interactions between data models. ' +
+        'Clubs can host meetings with optional attendance for club members. ' +
+        'Google Books API integrates book information into each meeting. ' +
+        'A Friends system allows users to send, approve or deny requests to join each other\'s Friends List. ' +
+        'Point-scoring and betting drive user engagement by creating friendly competition.',
+        tags: ['React', 'REST', 'FastAPI', 'ViteJS', 'CSS', 'PostgreSQL',
+            'Bootstrap', 'Docker', 'Python', 'JavaScript', 'JSX']
     },
     {
-        image: booky,
+        image: conferencego,
         liveLink: 'test',
         gitLink: 'https://github.com/john-thomas-gray/Conference-GO',
         title: 'Conference GO',
-        description: 'A full-stack web application that allows users to keep ' +
-        'track of conferences, events, and attendees: dynamic front-end with ' +
-        'React, JavaScript, and Bootstrap, back-end infrastructure using Django ' +
-        'and Python, ensuring robustness and scalability, and third-party APIs ' +
-        'with Pexels and Weather updates.',
-        tags: ['React', 'JavaScript', 'Django', 'Python', 'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST API']
+        description: 'A full-stack web application that allows users to keep track of conferences, events, and attendees. ' +
+        'The front-end is built with React, JavaScript, JSX and Bootstrap. ' +
+        'RESTful APIs on the backend were created with Django and Python. ' +
+        'Third-party APIs Pexels and Weather update conferences with location photos and weather information.' +
+        '',
+        tags: ['React', 'JavaScript', 'Django', 'Python', 'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST', 'Microservices']
     },
     {
         image: carcar,
         liveLink: 'test',
         gitLink: 'https://github.com/john-thomas-gray/CarCar',
         title: 'CarCar',
-        description: 'A dynamic web application designed to handle inventory, sales, and automobile services for a car dealership',
-        tags: ['React', 'JavaScript', 'Django', 'Python', 'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST API']
+        description: 'A microservices web application designed to handle automobile inventory, sales, and services for a car dealership. ' +
+        'Users submit forms to add automobiles, technicians, and customers to a postgreSQL database and schedule appointments. ' +
+        'A table organizes appointments by an updatable status: scheduled, finished or cancelled. ' +
+        'A reactive search feature allows users to look up appointments associated with a vehicle\'s VIN. ' +
+        'Microservices regularly exchange data with poling. ' +
+        '',
+        tags: ['React', 'JavaScript', 'Django', 'Python', 'REST',  'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST', 'Poling']
     },
 ];
 
