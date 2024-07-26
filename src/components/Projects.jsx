@@ -77,7 +77,7 @@ function ProjectCard({ image, link, title, description, tags }) {
                 <div className="d-flex justify-content-between mb-3 align-items-center">
                     <h5 className="card-title">{title}</h5>
                     <div style={{marginRight: '40px'}}>
-                    <a href={link} target="_blank" className="btn btn-primary" style={{...buttonStyle, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <a href={link} target="_blank" rel="noreferrer" className="btn btn-primary" style={{...buttonStyle, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                         {link.includes("github") ? (
                             <img src={github} alt="GitHub" style={{ width: '24px', height: '24px' }} />
                         ) : (

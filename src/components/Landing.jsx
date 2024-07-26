@@ -4,7 +4,6 @@ import linkedin from '../images/linkedin.png';
 import github from '../images/github.png';
 import gmail from '../images/gmail.png';
 import profile from '../images/profile_sq.png';
-import jungle_vista from '../images/jungle_vista.jpg';
 
 const Tooltip = ({ position, message }) => {
     return (
