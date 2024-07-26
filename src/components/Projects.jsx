@@ -102,7 +102,7 @@ const myProjects = [
         image: beecore,
         link: 'https://www.changeclimate.org/bee',
         title: 'Business Emissions Evaluator',
-        description: 'A carbon emissions measurement software I\’m developing as a volunteer in collaboration with the Change Climate Project. ' +
+        description: 'A carbon emissions measurement software I am developing as a volunteer in collaboration with the Change Climate Project. ' +
         'This robust and modular codebase uses TypeScript and Node.js, with microservices written in Python. ' +
         'Global corporations (REI, Vuori, etc.) utilize the React-based frontend to input data, calculate emissions and plan reduction strategies. ' +
         'Charts and graphs are implemented for data visualization. Interfaces and types facilitate adherence to rigorous style guidelines. ' +
