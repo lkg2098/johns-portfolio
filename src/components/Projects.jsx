@@ -119,7 +119,7 @@ const myProjects = [
         'with JSX, CSS, and Bootstrap for styling. The nav bar uses DOM manipulation to ' +
         'take the user to the selected section. UseEffect hook makes "email address copied" ' +
         'message follow the user\'s cursor. EmailJS, a third-party API, powers the contact form.  ' +
-        'I deployed the site with Heroku and Netlify.',
+        'I deployed the site with Netlify.',
         tags: ['React', 'Bootstrap', 'DOM', 'CSS', 'EmailJS', 'Netlify', 'JSX', 'JavaScript'],
     },
     {

@@ -198,6 +198,8 @@ nav {
 
 .navbar-toggler {
   border-color: white !important;
+  margin-right: auto;
+  margin-left: 1rem;
 }
 
 .navbar-toggler-icon {
