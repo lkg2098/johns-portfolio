@@ -1,9 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 export default function Header(props) {
     return (
-    <header style={{padding: '2rem', backgroundColor: 'red'}  }>
+    <header style={{padding: '2rem'}  }>
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container-fluid">
           <button

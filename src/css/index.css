@@ -325,8 +325,9 @@ nav {
 }
 
 .skills-p {
-  width: 350px;
-  padding: 2px; /* Adds space inside the box around the text */
+  width: 100%;
+  padding: 2px;
+  margin: 0 auto;
   text-align: justify;
   font-weight: bold;
 }
