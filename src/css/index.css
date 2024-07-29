@@ -25,6 +25,7 @@ html, body {
   background-color: var(--white);
   font-family: 'Frutiger';
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Intro Section */
@@ -98,6 +99,25 @@ h4 {
   .profile-image img {
       max-width: 80%;
       margin-bottom: 2rem;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .frontend,
+  .backend,
+  .languages,
+  .devops {
+      flex: unset;
+      width: 100%;
+      padding: 1rem 0;
   }
 }
 
@@ -173,13 +193,14 @@ nav {
 }
 
 .navbar-collapse {
-  background-color: var(--navy);
+  background-color: rgba(1, 47, 35, 0.9);
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 200;
   width: 100vw;
+  padding-top: 1rem;
 }
 
 .collapse.show .navbar-nav {
@@ -301,22 +322,6 @@ nav {
 .image-container:hover .alt-text {
   visibility: visible;
   opacity: 1;
-}
-
-@media (max-width: 800px) {
-  .skills {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .frontend,
-  .backend,
-  .languages,
-  .devops {
-      flex: unset;
-      width: 100%;
-      padding: 1rem 0;
-  }
 }
 
 .skills-p {

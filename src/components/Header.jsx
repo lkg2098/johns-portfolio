@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header(props) {
     return (
-    <header style={{padding: '2rem'}}>
+    <header style={{padding: '2rem', backgroundColor: 'red'}  }>
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container-fluid">
           <button
