@@ -11,7 +11,6 @@ import nodejs from '../images/nodejs.svg';
 import postgresql from '../images/postgresql.svg';
 import react from '../images/react.svg';
 import bootstrap from '../images/bootstrap.svg';
-// import tailwind from '../images/tailwind.svg';
 import docker from '../images/docker.svg';
 import git from '../images/git.svg';
 import cicd from '../images/cicd.png';
@@ -30,7 +29,7 @@ export default function Skills() {
         >
             <div style={{
                     flex: 1,
-                    padding: '1rem',
+
                     }}>
                 <h1 style={{
                     fontWeight: 'bold',

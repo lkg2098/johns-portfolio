@@ -6,7 +6,7 @@ export default function Header(props) {
     <header style={{padding: '2rem'}}>
       <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container-fluid">
-          <button style={{padding: '1rem'}}
+          <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -14,9 +14,11 @@ export default function Header(props) {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style={{marginRight: '1rem'}}
           >
-          <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse sticky-top" id="navbarNav" >
                   <ul className="navbar-nav">
                       <li className="nav-item">
