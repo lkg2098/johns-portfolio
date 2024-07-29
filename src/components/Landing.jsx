@@ -63,7 +63,7 @@ export default function Landing() {
         backgroundImage: 'linear-gradient(to right, #395B4D 55%, #012F23 100%)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+        backgroundAttachment: 'scroll',
     };
 
     return (
