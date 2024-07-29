@@ -24,7 +24,7 @@ const Tooltip = ({ position, message }) => {
 
 export default function Landing() {
 
-    const myEmail = process.env.REACT_APP_MY_EMAIL;
+    const myEmail = "process.env.REACT_APP_MY_EMAIL";
     const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0 });
 
     const handleCopy = (e) => {
