@@ -14,7 +14,7 @@ Dynamic Content: Real-time updates of project details and professional milestone
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-What things you need to install the software and how to install them:
+To install the software you will need:
 
 ```bash
 nodejs
