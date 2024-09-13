@@ -101,21 +101,12 @@ h4 {
       margin-bottom: 2rem;
   }
 
-  .skills {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-  .skills {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .frontend,
   .backend,
   .languages,
   .devops {
-      flex: unset;
+    display: flex;
+    flex: unset;
       width: 100%;
       padding: 1rem 0;
   }
@@ -229,47 +220,50 @@ nav {
 
 .frontend {
   flex: 1;
-  display: flex;        /* Enables flexbox */
-  flex-direction: column; /* Stacks children vertically */
-  align-items: center;  /* Centers children horizontally */
-  justify-content: center; /* Centers children vertically if needed */
-  width: 100%;          /* Ensures the container takes full width if standalone */
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
 }
+
 .backend {
   flex: 1;
-  display: flex;        /* Enables flexbox */
-  flex-direction: column; /* Stacks children vertically */
-  align-items: center;  /* Centers children horizontally */
-  justify-content: center; /* Centers children vertically if needed */
-  width: 100%;          /* Ensures the container takes full width if standalone */
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
 }
+
 .languages {
   flex: 1;
-  display: flex;        /* Enables flexbox */
-  flex-direction: column; /* Stacks children vertically */
-  align-items: center;  /* Centers children horizontally */
-  justify-content: center; /* Centers children vertically if needed */
-  width: 100%;          /* Ensures the container takes full width if standalone */
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
 }
+
 .devops {
   flex: 1;
-  display: flex;        /* Enables flexbox */
-  flex-direction: column; /* Stacks children vertically */
-  align-items: center;  /* Centers children horizontally */
-  justify-content: center; /* Centers children vertically if needed */
-  width: 100%;          /* Ensures the container takes full width if standalone */
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
 }
 
 /* Main container styles */
 .skills {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: center;
   width: 100vw;
   background: linear-gradient(to bottom, #F7F9EB 90%, #FFFFFF 100%);
   background-size: 'cover';
@@ -278,17 +272,32 @@ nav {
   background-attachment: 'fixed';
   color: #012F23;
   padding: 7rem 5rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.skills-p {
+  flex: 2;
+  width: 100%;
+  padding: 2px;
+  margin: 0 auto;
+}
+
+.skillsSections {
+  display: flex;
+  flex: 4;
+  flex-direction: row;
+  align-items: flex-start;
+
 }
 
 .image-container {
   position: relative;
   display: flex;
-  flex-direction: row; /* Aligns children horizontally */
-  align-items: center; /* Keeps items aligned at their center */
-  justify-content: center; /* Centers items horizontally within the container */
-  gap: 10px; /* Adds space between the image and text */
-  margin-bottom: 10px; /* Adds some space between each image container */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .alt-text {
@@ -322,14 +331,6 @@ nav {
 .image-container:hover .alt-text {
   visibility: visible;
   opacity: 1;
-}
-
-.skills-p {
-  width: 100%;
-  padding: 2px;
-  margin: 0 auto;
-  /* text-align: justify; */
-  /* font-weight: bold; */
 }
 
 /* Projects */
