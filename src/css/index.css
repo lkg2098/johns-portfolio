@@ -112,8 +112,10 @@ h4 {
   }
 }
 
-.center {
+.section-heading {
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 3rem;
 }
 
 /* Footer */
@@ -271,7 +273,10 @@ nav {
   background-position-y: 'fixed';
   background-attachment: 'fixed';
   color: #012F23;
-  padding: 7rem 5rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   font-size: 1.5rem;
 }
 
