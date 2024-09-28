@@ -27,6 +27,7 @@ export default function Header(props) {
           aria-expanded="false"
           aria-label="Toggle navigation"
           style={{marginRight: '1rem'}}
+          onClick={(toggleNavbar)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
