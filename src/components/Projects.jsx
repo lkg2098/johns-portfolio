@@ -6,6 +6,7 @@ import portfolio from '../images/portfolio.png';
 import carcar from '../images/carcar.png';
 import conferencego from '../images/conferencego.png';
 import github from '../images/github.png'
+import fourdognight from '../images/FourDogNightTitle.png';
 
 function ImagePreviewer({ image, title }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -98,6 +99,18 @@ function ProjectCard({ image, link, title, description, tags }) {
 }
 
 const myProjects = [
+    {
+        image: fourdognight,
+        link: 'https://www.fourdognight.com',
+        title: 'Four Dog Night',
+        description: 'A complex singele page application (SPA) board game built with React state and logic. ' +
+        'Complex frontend logic creates elaborate gameplay and dynamic move options. ' +
+        'Bold aesthetics designed in Figma and executed in React with tasteful microinteractions. ' +
+        '2-player and 4-player modes support different game logic. ' +
+        'Cute dogs!' +
+        '',
+        tags: ['React', 'JavaScript', 'CSS', 'Figma', 'Node.js', 'Git'],
+    },
     {
         image: beecore,
         link: 'https://www.changeclimate.org/bee',
