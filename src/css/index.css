@@ -385,6 +385,7 @@ nav {
   .projects .col-md-4 {
     max-width: 80%;
     margin-bottom: 1rem;
+    margin-right: 200px;
   }
 
   .projects .card {
