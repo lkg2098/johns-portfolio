@@ -3,7 +3,7 @@ import React from "react";
 const SkillsSection = ({ heading, items }) => {
     return (
         <div className={heading.toLowerCase()}>
-            <h2>{heading}</h2>
+            <h2 class="image-container-heading">{heading}</h2>
             <div><br /></div>
             <div className="image-container-wrapper">
                 {items.map((item, index) => (

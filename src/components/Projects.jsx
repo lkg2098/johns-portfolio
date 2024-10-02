@@ -103,7 +103,7 @@ const myProjects = [
         image: fourdognight,
         link: 'https://www.fourdognight.com',
         title: 'Four Dog Night',
-        description: 'A complex single page application (SPA) board game built with React state and logic. ' +
+        description: 'A single page application (SPA) board game built with React state and logic. ' +
         'Complex frontend logic creates elaborate gameplay and dynamic move options. ' +
         'Bold aesthetics designed in Figma and executed in React with tasteful microinteractions. ' +
         '2-player and 4-player modes support different game logic. ' +
