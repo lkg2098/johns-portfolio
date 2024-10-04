@@ -34,7 +34,7 @@
 
 .landing .content {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
 }
 
@@ -42,7 +42,6 @@
   font-family: 'Frutiger', sans-serif;
   font-size: 5rem;
   color: white;
-
   font-weight: bolder;
 }
 .landing h2 {
@@ -53,11 +52,11 @@
 }
 
 .information {
-  grid-column: 1/3;
+  grid-column: 1/4;
 }
 
 .profile-image {
-  grid-column: 3/6;
+  grid-column: 4/7;
 }
 
 .profile-image img {
@@ -164,77 +163,42 @@ nav {
 /* SKILLS */
 
 .skills {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
   background: linear-gradient(to bottom, #F7F9EB 90%, #FFFFFF 100%);
-  background-size: 'cover';
-  background-position: 'center';
-  background-position-y: 'fixed';
-  background-attachment: 'fixed';
   color: #012F23;
-  padding-left: 15rem;
-  padding-right: 15rem;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
   font-size: 1.5rem;
 }
 
+.skills h1 {
+  font-weight: bold;
+  color: #012F23;
+  grid-row: 1;
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+}
+
 .skills .information {
-  flex: 2;
-  width: 100%;
-  padding: 2px;
-  margin: 0 auto;
+  display: grid;
+  grid-row: 2;
+  gap: 1rem;
+  grid-column: 2 / 6;
 }
 
 .skills .sections {
-  display: flex;
-  flex: 4;
-  flex-direction: row;
-  align-items: flex-start;
+  display: grid;
+  grid-row: 3;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  grid-column: 2 / 6;
 
 }
 
-.frontend {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 20px;
-}
-
-.backend {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 20px;
-}
-
-.languages {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 20px;
-}
-
-.devops {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 20px;
+.skill-section {
+  display: grid;
+  justify-self: center;
 }
 
 .image-container:hover .alt-text {
@@ -293,9 +257,10 @@ nav {
   color: 'black';
 }
 
-/* .container {
-
-} */
+.projects .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .card {
   border: 0px solid;
@@ -337,13 +302,21 @@ nav {
 
 /* PROJECTS */
 
+
+/* CONTACT */
+
 .contact {
+  background-color: #F7F9EB;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 7rem;
   padding-bottom: 7rem;
   color: #012F23;
 }
+
 
 .resizable {
   resize: vertical;

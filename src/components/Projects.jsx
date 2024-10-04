@@ -104,13 +104,11 @@ export default function Projects() {
                 Recent Projects
             </h1>
             <div className="container">
-                <div className="row">
                     {myProjects.map((project, index) => (
                         <div className="col-md-4" key={index}>
                             <ProjectCard {...project} />
                         </div>
                     ))}
-                </div>
             </div>
         </div>
     );

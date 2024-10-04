@@ -56,25 +56,12 @@ export default function Contact() {
     }
 
     return (
-        <div
-            className="contact"
-            style={{
-                backgroundColor: '#F7F9EB',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundPositionY: 'fixed',
-                backgroundAttachment: 'fixed',
-            }}
-        >
-            <div><br /></div>
-            <div><br /></div>
+        <div className="contact">
             <div className="offset-3 col-6">
                 <h1 style={{fontWeight: 'bold', textAlign: 'center'}}>Contact</h1>
-                <div><br /></div>
                 <p style={{fontWeight: 'bold', textAlign: 'center'}}>
                     Reach out for professional inquiries or just to chat!
                 </p>
-                <div><br /></div>
                 <br />
                 {userError && (
                     <div className="alert alert-danger">{userError}</div>
@@ -141,7 +128,7 @@ export default function Contact() {
                         <label htmlFor="message">Message</label>
                     </div>
                     <div className="text-center">
-                        <div><br /></div>
+
                         <button
                             type="submit"
                             className="btn  rounded-pill"

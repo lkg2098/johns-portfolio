@@ -61,14 +61,9 @@ const backend = [
 export default function Skills() {
     return (
         <div className="skills">
+            <h1>Skills</h1>
             <div className="information">
-                <h1 style={{
-                    fontWeight: 'bold',
-                    color: '#012F23',
-                    }}>
-                    Skills
-                </h1>
-                <div><br /></div>
+
                 <p>
                 I am proficient in a diverse array of technologies that span the complete software
                 development lifecycle. My expertise lies not only in continually honing
@@ -78,7 +73,7 @@ export default function Skills() {
                 </p>
             </div>
 
-            <div className="sections" style={{}}>
+            <div className="sections">
                 <SkillsSection heading="Languages" items={languages} />
                 <SkillsSection heading="Devops" items={devops} />
                 <SkillsSection heading="Frontend" items={frontend} />
