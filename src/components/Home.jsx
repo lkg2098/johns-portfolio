@@ -8,7 +8,7 @@ export default function Home() {
         <>
             <main>
                 <div>
-                    <section id="home">
+                    <section id="landing">
                         <Landing />
                     </section>
                     <section id="skills">

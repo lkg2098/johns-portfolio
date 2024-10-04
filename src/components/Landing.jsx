@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// Images
 import linkedin from '../images/linkedin.png';
 import github from '../images/github.png';
 import gmail from '../images/gmail.png';
@@ -59,59 +58,44 @@ export default function Landing() {
         };
     }, [tooltip.visible]);
 
-    const backgroundStyle = {
-        backgroundImage: 'linear-gradient(to right, #395B4D 55%, #012F23 100%)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'scroll',
-    };
-
     return (
-        <div style={backgroundStyle}>
-            <div><br /></div>
-            <div><br /></div>
-            <div><br /></div>
-            <div><br /></div>
-            <div><br /></div>
-            <div><br /></div>
-            <div className="c-row">
-                <div className="d-flex align-items-center justify-items-center">
-                    <div style={{width: '8rem'}}></div>
-                    <div className="about-text align-items-center">
-                        <h1 className="name">
-                            John Gray
-                        </h1>
-                        <h2 className="fullstack">
-                            FULL - STACK DEVELOPER
-                        </h2>
-                        <div><br /></div>
+        <div className='landing'>
+            <div className="content">
+                <div className="information">
+                    <h1>
+                        John Gray
+                    </h1>
+                    <h2>
+                        FULL - STACK DEVELOPER
+                    </h2>
+                    <div className='contact-icons'>
                         <a
                             href="https://www.linkedin.com/in/john-thomas-gray"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className='linkedin-icon'
                         >
                             <img
                                 src={linkedin}
                                 alt="linkedin"
                                 width='55px'
                                 style={{paddingRight: '10px', cursor: 'pointer'}}
-                                className="expand"
                             />
                         </a>
                         <a
                             href="https://github.com/john-thomas-gray"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className='github-icon'
                         >
                             <img
                                 src={github}
                                 alt="github"
                                 width='55px'
                                 style={{paddingRight: '10px', cursor: 'pointer'}}
-                                className="expand"
                             />
                         </a>
-                        <span className="expand">
+                        <span className='gmail-icon'>
                             <img
                                 src={gmail}
                                 alt="gmail"
@@ -123,22 +107,16 @@ export default function Landing() {
                                 onClick={handleCopy}
                             />
                         </span>
-                        <div><br /></div>
                     </div>
-                    <div className="profile-image align-items-center position-relative">
-                        <img
-                            src={profile}
-                            alt="Profile"
-                        />
-                    </div>
-                    <div style={{width: '8rem'}}></div>
+                </div>
+                <div className="profile-image">
+                    <img
+                        src={profile}
+                        alt="Profile"
+                    />
                 </div>
             </div>
             {tooltip.visible && <Tooltip position={{ x: tooltip.x, y: tooltip.y }} message="Email address copied to clipboard!" />}
-            <div><br /></div>
-            <div><br /></div>
-            <div><br /></div>
-
         </div>
     )
 }

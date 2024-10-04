@@ -15,7 +15,7 @@ export default function Header(props) {
   }
 
   return (
-  <header style={{padding: '2rem'}  }>
+  <header>
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
         <button
@@ -37,7 +37,7 @@ export default function Header(props) {
                     <li className="nav-item">
                       <span
                           className="nav-link nav-content"
-                          onClick={() => handleNavItemClick("home")}
+                          onClick={() => handleNavItemClick("landing")}
                           style={{ cursor: 'pointer' }}
                       >
                           Home
