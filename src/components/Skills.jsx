@@ -61,7 +61,7 @@ const backend = [
 export default function Skills() {
     return (
         <div className="skills">
-            <div className="skills-p">
+            <div className="information">
                 <h1 style={{
                     fontWeight: 'bold',
                     color: '#012F23',
@@ -78,7 +78,7 @@ export default function Skills() {
                 </p>
             </div>
 
-            <div className="skillsSections" style={{}}>
+            <div className="sections" style={{}}>
                 <SkillsSection heading="Languages" items={languages} />
                 <SkillsSection heading="Devops" items={devops} />
                 <SkillsSection heading="Frontend" items={frontend} />

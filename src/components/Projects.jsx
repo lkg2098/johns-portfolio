@@ -5,98 +5,8 @@ import colorChameleon from '../images/colorchameleon.png';
 import portfolio from '../images/portfolio.png';
 import carcar from '../images/carcar.png';
 import conferencego from '../images/conferencego.png';
-import github from '../images/github.png'
 import fourdognight from '../images/FourDogNightTitle.png';
-
-function ImagePreviewer({ image, title }) {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
-
-    return (
-        <>
-            <img
-                src={image}
-                alt={title}
-                style={{
-                    cursor: 'zoom-in',
-                    width: '100%',
-                    height: '230px',
-                    objectFit: 'cover',
-                    borderRadius: '5px'
-                }}
-                onClick={openModal}
-            />
-            {isModalOpen && (
-                <div style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    width: '100vw',
-                    height: '100vh',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    zIndex: 1050
-                }} onClick={closeModal}>
-                    <img
-                        src={image}
-                        alt={title}
-                        style={{
-                            cursor: 'zoom-out',
-                            maxHeight: '90%',
-                            maxWidth: '90%',
-                            boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                        }}
-                    />
-                </div>
-            )}
-        </>
-    );
-}
-
-function ProjectCard({ image, link, title, description, tags }) {
-    const buttonStyle = {
-        backgroundColor: '#B4C69E',
-        fontWeight: 'bold',
-        color: '#012F23',
-        outline: '2px solid white',
-        border: 'none',
-        borderRadius: '5px',
-        padding: '5px 10px',
-        fontSize: '0.8rem',
-    };
-
-    return (
-        <div className="card mb-4" style={{ border: '0px solid', backgroundColor: '#F3F5DF', color: 'black', borderRadius: '4px' }}>
-            <div style={{ margin: '10px' }}>
-                <ImagePreviewer image={image} title={title} />
-            </div>
-            <div className="card-body">
-                <div className="d-flex justify-content-between mb-3 align-items-center">
-                    <h5 className="card-title">{title}</h5>
-                    <div style={{marginRight: '40px'}}>
-                    <a href={link} target="_blank" rel="noreferrer" className="btn btn-primary" style={{...buttonStyle, width: '30px', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        {link.includes("github") ? (
-                            <img src={github} alt="GitHub" style={{ width: '24px', height: '24px' }} />
-                        ) : (
-                            '💻'
-                        )}
-                    </a>
-                    </div>
-                </div>
-                <p className="card-text">{description}</p>
-                <div>
-                    {tags.map(tag => (
-                        <span key={tag} className="badge me-1" style={{ backgroundColor: '#012F23' }}>{tag}</span>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
+import ProjectCard from './ProjectCard';
 
 const myProjects = [
     {
@@ -193,7 +103,6 @@ export default function Projects() {
             <h1 className="section-heading">
                 Recent Projects
             </h1>
-
             <div className="container">
                 <div className="row">
                     {myProjects.map((project, index) => (
