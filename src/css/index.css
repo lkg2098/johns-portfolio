@@ -24,18 +24,22 @@
 /* LANDING */
 
 .landing {
-  padding: 3rem 3rem 3rem 3rem;
+  padding: 3rem;
   background-image: linear-gradient(to right, #395B4D 55%, #012F23 100%);
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
   height: 85vh;
+  display: grid;
+  place-items: center;
 }
 
 .landing .content {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .landing h1 {
@@ -43,20 +47,25 @@
   font-size: 5rem;
   color: white;
   font-weight: bolder;
+  text-align: left;
 }
 .landing h2 {
   font-family: 'Frutiger', sans-serif;
   font-size: 2.5rem;
   color: #F3F5DF;
   font-weight: bolder;
+  text-align: left;
 }
 
 .information {
   grid-column: 1/4;
+  align-self: center;
 }
 
 .profile-image {
   grid-column: 4/7;
+  display: grid;
+  place-items: center;
 }
 
 .profile-image img {
@@ -199,6 +208,7 @@ nav {
 .skill-section {
   display: grid;
   justify-self: center;
+  align-items: start;
 }
 
 .image-container:hover .alt-text {
@@ -206,17 +216,21 @@ nav {
   opacity: 1;
 }
 
+.image-container-wrapper {
+  display: grid;
+  justify-self: center;
+  align-items: start;
+  gap: 1rem;
+}
+.image-container {
+  display: grid;
+  justify-self: center;
+}
+
 /* SKILLS */
 
-.image-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
+
+
 
 .alt-text {
   visibility: hidden;
@@ -249,18 +263,28 @@ nav {
 /* PROJECTS */
 
 .projects {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
   background: linear-gradient(to bottom, #FFFFFF 95%, #F7F9EB 100%);
-  color: 'black';
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  row-gap: 2rem;
+}
+
+.projects h1 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  text-align: center;
 }
 
 .projects .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / -1;
+  grid-row: 2;
+  gap: 1rem;
 }
+
 
 .card {
   border: 0px solid;
@@ -268,14 +292,6 @@ nav {
   color: black;
   border-radius: 4px;
 }
-
-/* .card .title {
-
-}
-
-.card .body {
-
-} */
 
 .card .button {
   background-color: #B4C69E;
@@ -290,9 +306,11 @@ nav {
 
 
 .section-heading {
+  display: grid;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 3rem;
+  justify-self: center;
+  align-self: center;
 }
 
 
