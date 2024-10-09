@@ -59,62 +59,60 @@ export default function Landing() {
     }, [tooltip.visible]);
 
     return (
-        <div className='landing'>
-            <div className="content">
-                <div className="information">
-                    <h1>
-                        John Gray
-                    </h1>
-                    <h2>
-                        FULL - STACK DEVELOPER
-                    </h2>
-                    <div className='contact-icons'>
-                        <a
-                            href="https://www.linkedin.com/in/john-thomas-gray"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className='linkedin-icon'
-                        >
-                            <img
-                                src={linkedin}
-                                alt="linkedin"
-                                width='55px'
-                                style={{paddingRight: '10px', cursor: 'pointer'}}
-                            />
-                        </a>
-                        <a
-                            href="https://github.com/john-thomas-gray"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className='github-icon'
-                        >
-                            <img
-                                src={github}
-                                alt="github"
-                                width='55px'
-                                style={{paddingRight: '10px', cursor: 'pointer'}}
-                            />
-                        </a>
-                        <span className='gmail-icon'>
-                            <img
-                                src={gmail}
-                                alt="gmail"
-                                width='55px'
-                                style={{
-                                    paddingRight: '5px',
-                                    cursor: 'pointer',
-                                }}
-                                onClick={handleCopy}
-                            />
-                        </span>
-                    </div>
+        <div className='main-section landing'>
+            <div className="information">
+                <h1>
+                    John Gray
+                </h1>
+                <h2>
+                    FULL - STACK DEVELOPER
+                </h2>
+                <div className='contact-icons'>
+                    <a
+                        href="https://www.linkedin.com/in/john-thomas-gray"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='linkedin-icon'
+                    >
+                        <img
+                            src={linkedin}
+                            alt="linkedin"
+                            width='55px'
+                            style={{paddingRight: '10px', cursor: 'pointer'}}
+                        />
+                    </a>
+                    <a
+                        href="https://github.com/john-thomas-gray"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='github-icon'
+                    >
+                        <img
+                            src={github}
+                            alt="github"
+                            width='55px'
+                            style={{paddingRight: '10px', cursor: 'pointer'}}
+                        />
+                    </a>
+                    <span className='gmail-icon'>
+                        <img
+                            src={gmail}
+                            alt="gmail"
+                            width='55px'
+                            style={{
+                                paddingRight: '5px',
+                                cursor: 'pointer',
+                            }}
+                            onClick={handleCopy}
+                        />
+                    </span>
                 </div>
-                <div className="profile-image">
-                    <img
-                        src={profile}
-                        alt="Profile"
-                    />
-                </div>
+            </div>
+            <div className="profile-image">
+                <img
+                    src={profile}
+                    alt="Profile"
+                />
             </div>
             {tooltip.visible && <Tooltip position={{ x: tooltip.x, y: tooltip.y }} message="Email address copied to clipboard!" />}
         </div>
