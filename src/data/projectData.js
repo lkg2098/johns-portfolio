@@ -49,7 +49,7 @@ export const myProjects = [
     {
         id: 4,
         image: colorChameleon,
-        link: 'https://github.com/john-thomas-gray/Candy-Cruisers',
+        link: 'https://senorsuerte.itch.io/color-chameleon',
         title: 'Color Chameleon',
         description: 'An addictive blend of arcade shooters and color-matching puzzle video games. ' +
         'N-ary search algorithms dynamically reposition grid-based enemies and track spatial relationships between them. ' +
