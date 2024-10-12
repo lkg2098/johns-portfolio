@@ -2,7 +2,7 @@ import booky from '../images/Booky_homepage.jpg';
 import beecore from '../images/beecore.png';
 import colorChameleon from '../images/colorchameleon.png';
 import portfolio from '../images/portfolio.png';
-import carcar from '../images/carcar.png';
+// import carcar from '../images/carcar.png';
 import conferencego from '../images/conferencego.png';
 import fourdognight from '../images/FourDogNightTitle.png';
 

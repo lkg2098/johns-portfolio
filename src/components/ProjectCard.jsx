@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import github from '../images/github.png'
 
 export default function ProjectCard({ image, link, title, description, tags, ImagePreviewer }) {
