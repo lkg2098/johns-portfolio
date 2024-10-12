@@ -46,6 +46,15 @@ export default function Header(props) {
                     <li className="nav-item">
                       <span
                         className="nav-link nav-content"
+                        onClick={() => handleNavItemClick("about")}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        About
+                      </span>
+                    </li>
+                    <li className="nav-item">
+                      <span
+                        className="nav-link nav-content"
                         onClick={() => handleNavItemClick("skills")}
                         style={{ cursor: 'pointer' }}
                       >

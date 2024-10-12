@@ -8,6 +8,7 @@ import fourdognight from '../images/FourDogNightTitle.png';
 
 export const myProjects = [
     {
+        id: 1,
         image: fourdognight,
         link: 'https://www.fourdognight.com',
         title: 'Four Dog Night',
@@ -20,6 +21,7 @@ export const myProjects = [
         tags: ['React', 'JavaScript', 'CSS', 'Figma', 'Node.js', 'Git'],
     },
     {
+        id: 2,
         image: beecore,
         link: 'https://www.changeclimate.org/bee',
         title: 'Business Emissions Evaluator',
@@ -32,6 +34,7 @@ export const myProjects = [
         tags: ['React', 'Typescript', 'Cypress', 'CI/CD', 'CSS', 'Python', 'Node.js', 'Yarn'],
     },
     {
+        id: 3,
         image: portfolio,
         link: 'https://github.com/john-thomas-gray/Portfolio',
         title: 'Portfolio Site',
@@ -44,6 +47,7 @@ export const myProjects = [
         tags: ['React', 'Bootstrap', 'DOM', 'CSS', 'EmailJS', 'Netlify', 'JSX', 'JavaScript'],
     },
     {
+        id: 4,
         image: colorChameleon,
         link: 'https://github.com/john-thomas-gray/Candy-Cruisers',
         title: 'Color Chameleon',
@@ -56,6 +60,7 @@ export const myProjects = [
             // 'json', 'PostgreSQL']
     },
     {
+        id: 5,
         image: booky,
         link: 'https://github.com/john-thomas-gray/Booky',
         title: 'Booky',
@@ -69,6 +74,7 @@ export const myProjects = [
             'Bootstrap', 'Docker', 'Python', 'JavaScript', 'JSX']
     },
     {
+        id: 6,
         image: conferencego,
         link: 'https://github.com/john-thomas-gray/Conference-GO',
         title: 'Conference GO',
@@ -79,16 +85,17 @@ export const myProjects = [
         '',
         tags: ['React', 'JavaScript', 'Django', 'Python', 'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST', 'Microservices']
     },
-    {
-        image: carcar,
-        link: 'https://github.com/john-thomas-gray/CarCar',
-        title: 'CarCar',
-        description: 'A microservices web application designed to handle automobile inventory, sales, and services for a car dealership. ' +
-        'Users submit forms to add automobiles, technicians, and customers to a postgreSQL database and schedule appointments. ' +
-        'A table organizes appointments by an updatable status: scheduled, finished or cancelled. ' +
-        'A reactive search feature allows users to look up appointments associated with a vehicle\'s VIN. ' +
-        'Microservices regularly exchange data with poling. ' +
-        '',
-        tags: ['React', 'JavaScript', 'Django', 'Python', 'REST',  'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST', 'Poling']
-    },
+    // {
+    //     id: 7,
+    //     image: carcar,
+    //     link: 'https://github.com/john-thomas-gray/CarCar',
+    //     title: 'CarCar',
+    //     description: 'A microservices web application designed to handle automobile inventory, sales, and services for a car dealership. ' +
+    //     'Users submit forms to add automobiles, technicians, and customers to a postgreSQL database and schedule appointments. ' +
+    //     'A table organizes appointments by an updatable status: scheduled, finished or cancelled. ' +
+    //     'A reactive search feature allows users to look up appointments associated with a vehicle\'s VIN. ' +
+    //     'Microservices regularly exchange data with poling. ' +
+    //     '',
+    //     tags: ['React', 'JavaScript', 'Django', 'Python', 'REST',  'JSX', 'Bootstrap', 'CSS', 'HTML', 'REST', 'Poling']
+    // },
 ];

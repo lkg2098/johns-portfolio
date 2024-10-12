@@ -62,16 +62,6 @@ export default function Skills() {
     return (
         <div className="main-section skills">
             <h1 className='section-heading'>Skills</h1>
-            {/* <div className="information">
-
-                <p>
-                I am proficient in a diverse array of technologies that span the complete software
-                development lifecycle. My expertise lies not only in continually honing
-                a deep understanding of tools currently in my stack, but also in
-                efficiently incorportating newly learned skills. I make an impact early,
-                whether I'm jumping into a new codebase or helping the team pivot to an emergent technology.
-                </p>
-            </div> */}
 
             <div className="sections">
                 <SkillsSection heading="Languages" items={languages} />

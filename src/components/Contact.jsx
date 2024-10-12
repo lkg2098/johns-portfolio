@@ -57,7 +57,7 @@ export default function Contact() {
 
     return (
         <div className="main-section contact">
-            <div className="offset-3 col-6">
+            <div className="content">
                 <h1 className='section-heading'>Contact</h1>
                 <p style={{fontWeight: 'bold', textAlign: 'center'}}>
                     Reach out for professional inquiries or just to chat!
