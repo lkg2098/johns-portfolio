@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Frutiger';
-  src: url('../fonts/Frutiger.ttf') format('truetype');
+  font-family: "Frutiger";
+  src: url("../fonts/Frutiger.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Frutiger';
-  src: url('../fonts/Frutiger_bold.ttf') format('truetype');
+  font-family: "Frutiger";
+  src: url("../fonts/Frutiger_bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -23,7 +23,7 @@
 
 .section-heading {
   font-weight: bold;
-  color: #012F23;
+  color: #012f23;
   grid-row: 1;
   grid-column: 1 / -1;
   justify-self: center;
@@ -41,14 +41,13 @@
   padding: 4rem 0rem;
 }
 
-
 /* LANDING */
 
 .landing {
-  background-image: linear-gradient(to right, #395B4D 55%, #012F23 100%);
+  background-image: linear-gradient(to right, #395b4d 55%, #012f23 100%);
   background-size: cover;
   background-position: center;
-  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-columns: repeat(12, 1fr); */
   height: 100vh;
   place-items: center;
 }
@@ -59,20 +58,20 @@
   grid-column: 3/10;
   justify-content: start;
   gap: 1rem;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .landing h1 {
-  font-family: 'Frutiger', sans-serif;
+  font-family: "Frutiger", sans-serif;
   font-size: 5rem;
   color: white;
   font-weight: bolder;
   text-align: left;
 }
 .landing h2 {
-  font-family: 'Frutiger', sans-serif;
+  font-family: "Frutiger", sans-serif;
   font-size: 2.5rem;
-  color: #F3F5DF;
+  color: #f3f5df;
   font-weight: bolder;
   text-align: left;
 }
@@ -87,42 +86,54 @@
   min-height: 30rem;
   object-fit: cover;
   border-radius: 0.5rem;
-  background-color: #F3F5DF;
-  border-radius       : 50%;
+  background-color: #f3f5df;
+  border-radius: 50%;
   border: 0.3rem solid white;
 }
 
-@media(max-width: 1350px) {
+@media (max-width: 1350px) {
   .landing h2 {
-    font-family: 'Frutiger', sans-serif;
+    font-family: "Frutiger", sans-serif;
     font-size: 2rem;
-    color: #F3F5DF;
+    color: #f3f5df;
     font-weight: bolder;
     text-align: left;
   }
 }
 
-@media(max-width: 1100px) {
+@media (max-width: 1100px) {
   .profile-image img {
     max-width: 25rem;
-    min-height: 25rem;
+    min-height: 10rem;
     object-fit: cover;
     border-radius: 0.5rem;
-    background-color: #F3F5DF;
+    background-color: #f3f5df;
     transition: all 0.2s ease-in-out;
-    border-radius       : 50%;
+    border-radius: 50%;
     border: 0.3rem solid white;
   }
 }
 @media (max-width: 975px) {
+  .main-section {
+    column-gap: 0;
+  }
   .landing .information {
     grid-column: 1/13;
     justify-content: center;
     margin-top: 2rem;
   }
-  .information h1, .information h2 {
+  .information h1,
+  .information h2 {
     justify-self: center;
     text-align: center;
+  }
+
+  .information h1 {
+    font-size: 3rem;
+  }
+
+  .information h2 {
+    font-size: 2rem;
   }
 
   .profile-image {
@@ -131,6 +142,9 @@
   }
   .contact-icons {
     justify-self: center;
+  }
+  .contact-icons img {
+    width: 30px;
   }
 }
 
@@ -144,7 +158,7 @@ footer {
   margin: auto;
   text-align: center;
 }
-footer h6{
+footer h6 {
   grid-column: 2 / 3;
   align-self: center;
 }
@@ -156,10 +170,9 @@ footer h6{
   margin-top: 1rem;
 }
 
-
 /* NAV LINKS */
 nav {
-  padding: '1rem';
+  padding: "1rem";
   background-color: rgba(1, 47, 35, 0.95);
   height: 4rem;
   width: 100%;
@@ -167,7 +180,7 @@ nav {
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  font-family: 'Frutiger';
+  font-family: "Frutiger";
   font-weight: normal;
 }
 
@@ -176,7 +189,7 @@ nav {
   align-items: center;
   gap: 50px;
   margin-right: 2rem;
-  font-family: 'Frutiger';
+  font-family: "Frutiger";
   font-size: 1.3rem !important;
   font-weight: bolder;
 }
@@ -206,7 +219,7 @@ nav {
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #F3F5DF;
+  color: #f3f5df;
   display: block;
   text-align: center;
   width: 100% !important;
@@ -227,27 +240,23 @@ nav {
 /* ABOUT */
 
 .about {
-  background: linear-gradient(to bottom, #FFFFFF 95%, #F7F9EB 100%);
-
+  background: linear-gradient(to bottom, #ffffff 95%, #f7f9eb 100%);
 }
 
-.about > *:nth-child(3) {
+.about p {
   grid-column: 2/7;
-  grid-row: 2;
-  text-align: start;
-  height: auto;
-  margin: 0 auto;
-  align-items: end;
-}
-
-
-.about > *:nth-child(4) {
-  grid-column: 2/7;
-  grid-row: 3;
-  text-align: start;
+  text-align: justify;
   height: auto;
   margin: 0 auto;
   align-items: start;
+}
+
+.about > *:nth-child(3) {
+  grid-row: 2;
+}
+
+.about > *:nth-child(4) {
+  grid-row: 3;
 }
 
 .about img {
@@ -258,7 +267,7 @@ nav {
   height: auto;
 }
 
-@media(max-width: 1100px) {
+@media (max-width: 1100px) {
   .about {
     grid-template-rows: auto auto;
   }
@@ -272,7 +281,7 @@ nav {
   }
 }
 
-@media(max-width: 950px) {
+@media (max-width: 950px) {
   .about {
     grid-template-rows: auto auto;
   }
@@ -296,7 +305,6 @@ nav {
   }
 }
 
-
 /* ABOUT */
 
 /* SKILLS */
@@ -305,8 +313,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
-  background: linear-gradient(to bottom, #F7F9EB 95%, #FFFFFF 100%);
-  color: #012F23;
+  background: linear-gradient(to bottom, #f7f9eb 95%, #ffffff 100%);
+  color: #012f23;
   font-size: 1.5rem;
 }
 
@@ -323,7 +331,6 @@ nav {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   grid-column: 2 / 6;
-
 }
 
 .skill-section {
@@ -367,13 +374,8 @@ nav {
 
 /* SKILLS */
 
-
-
-
-
-
 .alt-text::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 50%;
@@ -386,7 +388,7 @@ nav {
 /* PROJECTS */
 
 .projects {
-  background: linear-gradient(to bottom, #FFFFFF 95%, #F7F9EB 100%);
+  background: linear-gradient(to bottom, #ffffff 95%, #f7f9eb 100%);
   color: black;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -402,7 +404,7 @@ nav {
 
 .projects .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-column: 1 / -1;
   grid-row: 2;
   gap: 1rem;
@@ -420,19 +422,19 @@ nav {
 
 .card {
   display: grid;
-  grid-template-columns:2;
-  row-gap: .5rem;
+  grid-template-columns: 2;
+  row-gap: 0.5rem;
   border: 0px solid;
-  background-color: #F3F5DF;
+  background-color: #f3f5df;
   color: black;
   border-radius: 4px;
   padding: 1rem 1.5rem;
 }
 
 .card .button {
-  background-color: #B4C69E;
+  background-color: #b4c69e;
   font-weight: bold;
-  color: #012F23;
+  color: #012f23;
   outline: 2px solid white;
   border: none;
   border-radius: 5px;
@@ -455,9 +457,9 @@ nav {
   margin: 10px;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .projects {
-    background: linear-gradient(to bottom, #FFFFFF 95%, #F7F9EB 100%);
+    background: linear-gradient(to bottom, #ffffff 95%, #f7f9eb 100%);
     color: red;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -468,16 +470,15 @@ nav {
 
 /* PROJECTS */
 
-
 /* CONTACT */
 
 .contact {
   display: grid;
-  background-color: #F7F9EB;
+  background-color: #f7f9eb;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #012F23;
+  color: #012f23;
   align-items: center;
   justify-content: center;
   min-height: 80vh;
@@ -487,7 +488,7 @@ nav {
   grid-column: 4/10;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .contact .content {
     grid-column: 3/11;
   }
@@ -504,13 +505,11 @@ nav {
   border: 0px solid #000;
 } */
 @media (max-width: 850px) {
-
-
   .skills {
     display: block;
     flex: unset;
-      width: 100%;
-      padding: 1rem 0;
+    width: 100%;
+    padding: 1rem 10px;
   }
 
   .skills-p {
@@ -533,5 +532,30 @@ nav {
 
   .alt-text {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-image img {
+    width: 70%;
+    margin-inline: auto;
+  }
+  .image-container-heading {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .image-container img {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .landing h1 {
+    font-size: 2rem;
+  }
+
+  .landing h2 {
+    font-size: 1.5rem;
   }
 }
